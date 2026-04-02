@@ -65,13 +65,13 @@ function App() {
     setExpandedId(expandedId === id ? null : id);
   };
 
-  const filteredQuestions = currentQuestions.filter(q => 
+  const filteredQuestions = currentQuestions.filter(q =>
     q.question.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
     <div className="app-container">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         className="header"
@@ -81,14 +81,14 @@ function App() {
       </motion.div>
 
       <div className="tabs-container">
-        <button 
+        <button
           className={`tab-btn ${activeTab === 'raqamli' ? 'active' : ''}`}
           onClick={() => { setActiveTab('raqamli'); setExpandedId(null); setSearchQuery(''); }}
         >
           <BookOpen size={18} />
           Raqamli Iqtisodiyot
         </button>
-        <button 
+        <button
           className={`tab-btn ${activeTab === 'innovatsion' ? 'active' : ''}`}
           onClick={() => { setActiveTab('innovatsion'); setExpandedId(null); setSearchQuery(''); }}
         >
@@ -98,24 +98,24 @@ function App() {
       </div>
 
       <motion.div
-         initial={{ opacity: 0 }}
-         animate={{ opacity: 1 }}
-         transition={{ delay: 0.2 }}
-         style={{ marginBottom: '2rem', position: 'relative' }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+        style={{ marginBottom: '2rem', position: 'relative' }}
       >
         <div style={{ position: 'relative' }}>
           <Search size={20} style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
-          <input 
-            type="text" 
-            placeholder="Savolni izlash..." 
+          <input
+            type="text"
+            placeholder="Savolni izlash..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             style={{
               width: '100%',
               padding: '1rem 1rem 1rem 3rem',
               borderRadius: '0.75rem',
-              background: 'rgba(30, 41, 59, 0.7)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+              background: 'var(--bg-card)',
+              border: '1px solid var(--border-color)',
               color: 'var(--text-main)',
               fontSize: '1rem',
               outline: 'none',
@@ -123,14 +123,14 @@ function App() {
               transition: 'border-color 0.2s ease',
             }}
             onFocus={(e) => e.target.style.borderColor = 'var(--primary)'}
-            onBlur={(e) => e.target.style.borderColor = 'rgba(255, 255, 255, 0.1)'}
+            onBlur={(e) => e.target.style.borderColor = 'var(--border-color)'}
           />
         </div>
       </motion.div>
 
       <div className="questions-list">
         {filteredQuestions.length > 0 ? (
-           filteredQuestions.map((q, index) => (
+          filteredQuestions.map((q, index) => (
             <QuestionCard
               key={q.id}
               index={index}
@@ -145,7 +145,7 @@ function App() {
           </div>
         )}
       </div>
-      
+
       <div style={{ textAlign: 'center', marginTop: '4rem', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
         <p>Hozircha ikkala fandang ham 10 tadan savol ko'rsatilgan. Qolganlarini qo'shishingiz mumkin.</p>
       </div>
