@@ -78,6 +78,7 @@ function App() {
       >
         <h1>Yakuniy Nazorat Savollari</h1>
         <p>Fanlar bo'yicha to'g'ri javoblarni yodlash dasturi</p>
+        <p>Iltimos saytni yopishni unutmang jigarlarim</p>
       </motion.div>
 
       <div className="tabs-container">
@@ -148,6 +149,7 @@ function App() {
 
       <div style={{ textAlign: 'center', marginTop: '4rem', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
         <p>Hozircha ikkala fandang ham 10 tadan savol ko'rsatilgan. Qolganlarini qo'shishingiz mumkin.</p>
+        <p>+99893 288 81 04</p>
       </div>
     </div>
   );
