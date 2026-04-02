@@ -76,9 +76,7 @@ function App() {
         animate={{ opacity: 1, y: 0 }}
         className="header"
       >
-        <h1>Yakuniy Nazorat Savollari</h1>
-        <p>Fanlar bo'yicha to'g'ri javoblarni yodlash dasturi</p>
-        <p>Iltimos saytni yopishni unutmang jigarlarim</p>
+        <h1>Hemis!! Yakuniy Nazorat Savollari. Iltimos saytni yopishni unutmang jigar</h1>
       </motion.div>
 
       <div className="tabs-container">
@@ -149,7 +147,7 @@ function App() {
 
       <div style={{ textAlign: 'center', marginTop: '4rem', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
         <p>Hozircha ikkala fandang ham 10 tadan savol ko'rsatilgan. Qolganlarini qo'shishingiz mumkin.</p>
-        <p>+99893 288 81 04</p>
+        <h1>+99893 288 81 04</h1>
       </div>
     </div>
   );
